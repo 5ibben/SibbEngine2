@@ -144,6 +144,15 @@ Prefab components are basically serializable versions of entity components that 
 
 ---
 
+## Project Scope & Implementation Status
+
+SibbEngine is an in-development, closed-source C++ game engine designed specifically for internal project development and high-performance 2D/3D game production. 
+
+* **Architectural Stage:** Core ECS, bitset filtering, and render pipeline abstractions fully designed and validated.
+* **Repository Purpose:** Serves as a technical architecture whitepaper detailing the low-level systems design, memory models, and Data-Oriented Design principles powering the engine.
+
+---
+
 ## Author
 
 **5ibben**  
