@@ -134,11 +134,11 @@ Prefab components are basically serializable versions of entity components that 
 | Feature | Implementation | Engineering Benefit |
 | :--- | :--- | :--- |
 | **Data Layout** | Sparse-Dense Mapping | Eliminates memory fragmentation; enables CPU cache prefetching |
+| **Memory Allocation** | Contiguous Component Blocks | Zero dynamic allocation cost during update loops |
 | **Existential Processing** | Uniform Bitsets (`EntitySetSystem`) | Fast signature filtering via 64-bit word chunking and CPU intrinsics to skip empty entity space and only process relevant data |
 | **Entity Safety** | Generational IDs & Free-List | $O(1)$ index recycling; safe detection of stale handles for cross-frame references without overhead in batch loops |
 | **Component Removal** | Swap-and-Pop Strategy | $O(1)$ deletion time without array reordering or dynamic reallocations |
 | **Instantiation** | Layered Prefab Application | Modular data composition without class hierarchy overhead |
-| **Memory Allocation** | Contiguous Component Blocks | Zero dynamic allocation cost during update loops |
 | **System Scheduling** | Explicit Sequential Pipeline | Zero runtime scheduler overhead; guaranteed, deterministic execution order |
 | **Deferred Operations** | Tag-Based State Flushes | Prevents component array mutation and index invalidation during active system loops |
 
